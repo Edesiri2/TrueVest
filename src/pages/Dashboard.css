@@ -1,0 +1,115 @@
+.dashboard {
+  padding: var(--space-lg);
+  padding-bottom: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-header h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.dashboard-header p {
+  color: var(--color-text-muted);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-card {
+  padding: var(--space-lg);
+  height: 100%;
+}
+
+.dashboard-card h3 {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.balance-amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.balance-change {
+  font-size: 0.875rem;
+}
+
+.balance-change.positive {
+  color: var(--color-success);
+}
+
+.balance-change.warning {
+  color: var(--color-warning);
+}
+
+.dashboard-banner {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  color: white;
+  padding: var(--space-xl);
+  text-align: center;
+  border-radius: var(--radius-lg);
+}
+
+.dashboard-banner h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+  color: white;
+}
+
+.dashboard-banner p {
+  margin-bottom: var(--space-xl);
+  opacity: 0.9;
+}
+
+.cta-button {
+  background-color: white;
+  color: var(--color-primary);
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* -------- Responsive Breakpoints -------- */
+
+@media (min-width: 640px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dashboard-banner {
+    padding: calc(var(--space-xl) * 1.25);
+  }
+}

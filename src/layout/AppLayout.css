@@ -1,0 +1,30 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+  padding: var(--space-md);
+  padding-bottom: calc(var(--space-md) + 60px); /* Account for bottom nav */
+}
+
+@media (min-width: 768px) {
+  .app-content {
+    padding: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-layout {
+    flex-direction: row;
+  }
+  
+  .app-content {
+    padding: var(--space-xl);
+    margin-left: 250px; /* Desktop sidebar width */
+    padding-bottom: var(--space-xl);
+  }
+}
